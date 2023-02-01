@@ -1,0 +1,205 @@
+.promise {
+    padding: 100px 0 182px 0;
+    box-sizing: border-box;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../../assets/images/promise-bg.jpeg);
+    color: #FFFFFF;
+}
+
+.promise-body {
+    max-width: 840px;
+}
+
+.promise-title {
+    font-family: "Roboto-Regular", Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 56px;
+    margin-bottom: 32px;
+}
+
+.promise-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    font-weight: 500;
+    font-family: "Roboto-Regular", Arial, Helvetica, sans-serif;
+    font-size: 26px;
+    line-height: 30px;
+    color: #FFFFFF;
+}
+
+.promise-item {
+    margin: 16px 0;
+}
+
+.opportun {
+    margin-top: 100px;
+    margin-bottom: 93px;
+}
+
+.opportun .container {
+    max-width: 1300px;
+}
+
+.opportun-title {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 37px;
+    font-family: "Roboto-Regular", Arial, Helvetica, sans-serif;
+    line-height: 42px;
+    color: #434449;
+    text-align: center;
+    letter-spacing: 1.1px;
+}
+
+.opportun-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 28px -6px 0 -6px;
+    display: flex;
+}
+
+.opportun-item {
+    background: #F9F9F9;
+    box-shadow: 0px 0px 4px rgb(0 0 0 / 10%);
+    border-radius: 20px;
+    width: calc(25% - 12px);
+    margin: 6px;
+    position: relative;
+}
+
+.opportun-wrapper {
+    padding: 32px 26px 104px 26px;
+    box-sizing: border-box;
+}
+
+.opportun-picture {
+    margin-bottom: 15px;
+}
+
+.opportun-icon {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    background-color: #FFC65D;
+    box-shadow: 0px 4px 20px rgb(255 198 93 / 30%);
+    border-radius: 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.opportun-icon-one {
+    background-image: url(../../assets/images/opportun-icon-one.svg);
+    background-color: #9033F9;
+}
+
+.opportun-icon-thue {
+    background-image: url(../../assets/images/opportun-icon-thue.svg);
+    background-color: #FF5966;
+}
+
+.opportun-icon-three {
+    background-image: url(../../assets/images/opportun-icon-three.svg);
+}
+
+.opportun-icon-four {
+    background-color: #29AAE3;
+    background-image: url(../../assets/images/opportun-icon-four.svg);
+}
+
+.opportun-midtitle {
+    font-weight: 900;
+    font-size: 19px;
+    font-family: "Roboto-Regular", Arial, Helvetica, sans-serif;
+    line-height: 26px;
+    color: #29AAE3;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.opportun-subtitle {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 19px;
+    font-family: "Roboto-Regular", Arial, Helvetica, sans-serif;
+    line-height: 23px;
+    color: #434449;
+    margin-top: 20px;
+}
+
+.opportun-sublist {
+    padding: 0 0 0 20px;
+    margin: 20px 0 0 0;
+    font-family: "NotoSans-Regular", Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 22px;
+    list-style-type: disc;
+    color: #29AAE3;
+}
+
+.opportun-subitem {
+    margin: 12px 0;
+}
+
+.opportun-text {
+    color: #434449;
+}
+
+.footer {
+    background: #53a8dd;
+    color: rgba(255, 255, 255, 0.7);
+    padding-top: 45px;
+    padding-bottom: 45px;
+}
+
+.text-center {
+    text-align: center!important;
+}
+
+.text-center a{
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    margin: 3%;
+}
+
+.footer .divider {
+    border-bottom: 1px solid #ffffff;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.footer .copyright, .footer .copyright a {
+    font-size: 14px;
+    color: white;
+}
+
+
+@media only screen and (max-width: 680px) {
+    .opportun-list{
+        flex-direction: column;
+    }
+
+    .opportun-list li{
+        width: 100%;
+    }
+}
+
+
+@media only screen and (min-width: 680px) and (max-width: 1000px) {
+    .opportun-list{
+        flex-wrap: wrap;
+    }
+    .opportun-list li{
+        width: 48%;
+    }
+
+    .opportun-sublist li{
+        width: 100%;
+    }
+}

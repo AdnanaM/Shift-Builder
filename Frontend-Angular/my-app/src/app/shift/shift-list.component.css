@@ -1,0 +1,46 @@
+.container{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 15px;
+    line-height: 1.42;
+    color: #ebebeb;
+    margin-top: 2%;
+}
+
+.row{
+    display: flex;
+    justify-content: center;
+}
+
+.editProfile{
+    margin-top: -6%;
+    text-decoration: none;
+    color: #00b7f1;
+    float: right;
+    margin-top: -20%;
+}
+
+.addComment{
+    margin-top: -6%;
+    text-decoration: none;
+    color: #00b7f1;
+    float: right;
+    margin-top: -12%;
+}
+
+.seeComment{
+    margin-top: -6%;
+    text-decoration: none;
+    color: #00b7f1;
+    float: right;
+    margin-top: -4%;
+}
+
+@media only screen and (max-width: 680px) {
+   .editProfile, .addComment, .seeComment{
+    float: none;
+    width: 100%;
+    display: inline-block;
+   }
+ }
+ 
+

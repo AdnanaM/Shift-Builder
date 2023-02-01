@@ -1,0 +1,70 @@
+<div class="container-fluid">
+    <div class="main">
+        <div class="card col-sm-6">
+            <div class="card-body">
+                <h5>Welcome to Shifton</h5>
+                <br>
+                <form [formGroup]="registerForm" (ngSubmit)="saveProfile(registerForm.value)">
+                    <div class="row mb-2">
+                        <div class="col">
+                            <h6>Registration</h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md">
+                            <label for="registerInputFirstName" class="control-label">First Name</label>
+                            <input type="text" formControlName = "firstName" name ="first_name" placeholder="Enter first name" class="form-control">
+                            <em *ngIf="!validateFirstName() && firstName.errors?.['required']">This field is required.</em>
+                            <em *ngIf="firstName.dirty && firstName.errors?.['pattern']">This field must contain only alphabetical characters and at least 2 letters.</em>
+                        </div>
+                        <div class="form-group col-md">
+                            <label for="registerInputLastName" class="control-label">Last Name</label>
+                            <input type="text" formControlName = "lastName" name="last_name" placeholder="Enter last name" class="form-control">
+                            <em *ngIf="!validateLastName() && lastName.errors?.['required']">This field is required.</em>
+                            <em *ngIf="lastName.dirty && lastName.errors?.['pattern']">This field must contain only alphabetical characters and at least 2 letters.</em>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md">
+                            <label for="registerInputEmail" class="control-label">Email</label>
+                            <input type="email" formControlName = "email" name="email" placeholder="Enter e-mail" class="form-control">
+                            <em *ngIf="!validateEmail() && email.errors?.['required']">This field is required.</em>
+                            <em *ngIf="!validateEmail() && email.errors?.['email']">Please provide a valid email.</em>
+                        </div>
+                        <div class="form-group col-md">
+                            <label for="registerInputPassword" class="control-label">Password</label>
+                            <input type="password" formControlName = "password" name="password" placeholder="Enter password" class="form-control">
+                            <em *ngIf="!validatePassword() && password.errors?.['required']">This field is required.</em>
+                            <em *ngIf="password.dirty && password.errors?.['pattern']">Password must be at least 8 characters long contain a number, an uppercase letter and a special character.</em> 
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md">
+                            <label for="registerInputUsername" class="control-label">Username</label>
+                            <input type="text" formControlName = "userName" name="user_name" placeholder="Enter username" class="form-control">
+                            <em *ngIf="!validateUserName() && userName.errors?.['required']">This field is required.</em>
+                            <em *ngIf="userName.dirty && userName.errors?.['pattern']">This field must contain only alphabetical characters, number and at least 6 letters.</em>
+                        </div>
+                        <div class="form-group col-md">
+                            <label for="registerInputAge" class="control-label">Age</label>
+                            <input type="number" formControlName = "age" name="age" placeholder="Enter age" class="form-control">
+                            <em *ngIf="!validateAge() && age.errors?.['required']">This field is required.</em>
+                            <em *ngIf="age.dirty && age.errors?.['min']">Minimum age is 6 years old.</em>
+                            <em *ngIf="age.dirty && age.errors?.['max']">Minimum age is 130 years old.</em>
+                        </div>
+                    </div>
+                    <div class="btn-signup">
+                        <button type="submit" [disabled]= "registerForm.invalid" class="btn btn-success">Sign Up</button>
+                    </div>
+                    <div *ngIf="registerInvalid" class="alert alert-success">Success register!</div>
+                    <div class="btn-signin">
+                        <span>
+                            Already have an account?  
+                            <a href="" [routerLink] = "['/user/login']"> Sign In</a>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

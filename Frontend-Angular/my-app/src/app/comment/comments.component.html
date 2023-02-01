@@ -1,0 +1,14 @@
+<div class="container">
+    <div class="row" *ngFor="let comment of commentsInfo">
+      <div class="col-md-10">
+        <collapsible-well>
+            <div class="title">Description: {{comment.description}}</div>
+            <div class="body">
+              <h4>Date: {{comment.created | date:'mediumDate'}}</h4>
+            </div>
+        </collapsible-well>
+      </div>
+    </div>
+  </div>
+
+  <p>test</p>

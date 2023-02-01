@@ -1,0 +1,20 @@
+.container{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 15px;
+    line-height: 1.42;
+    color: #ebebeb;
+    margin-top: 2%;
+}
+
+.row{
+    display: flex;
+    justify-content: center;
+}
+
+.deleteProfile{
+    margin-top: -6%;
+    text-decoration: none;
+    color: #00b7f1;
+    float: right;
+    margin-top: -20%;
+}

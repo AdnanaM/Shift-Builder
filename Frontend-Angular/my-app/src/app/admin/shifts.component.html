@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="row" *ngFor="let shift of shifts">
+      <div class="col-md-10">
+          <collapsible-well>
+            <div class="title">Name: {{shift.shift_name | uppercase}}</div>
+            <div class="body">
+              <h4>Date: {{shift.created | date:'mediumDate'}}</h4>
+              <h4>Start: {{shift.start}}</h4>
+              <h4>End: {{shift.end}}</h4>
+              <h4>Hourly Wage: {{shift.price | currency}}</h4>
+              <h4>Workplace: {{shift.place}}</h4>
+              <a class="deleteShift"  [routerLink]="['/user/allShifts/delete', shift._id]">Delete Shift</a>
+            </div>
+          </collapsible-well>
+      </div>
+    </div>
+  </div>
+  

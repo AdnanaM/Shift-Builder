@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="row" *ngFor="let user of users">
+      <div class="col-md-10">
+          <collapsible-well>
+            <div class="title">Username: {{user.username}}</div>
+            <div class="body">
+              <h4>Firstname: {{user.firstname}}</h4>
+              <h4>Lastname: {{user.lastname}}</h4>
+              <h4>Email: {{user.email}}</h4>
+              <h4>Age: {{user.age}}</h4>
+              <h4>Permission: {{user.permission}}</h4>
+              <h4>Id: {{user._id}}</h4>
+              <a class="deleteProfile"  [routerLink]="['/user/allUsers/delete', user._id]">Delete profile</a>
+            </div>
+          </collapsible-well>
+      </div>
+    </div>
+  </div>
+  
+  

@@ -1,0 +1,51 @@
+<div class="container-fluid">
+    <div class="main">
+        <div class="card col-md-4">
+            <div class="card-header">
+                <h5>Log in to your account</h5>
+            </div>
+            <div class="card-body">
+                <div *ngIf="loginInvalid" class="alert alert-danger">Login failed! Email or password is incorrect.</div>
+                <form [formGroup]="loginForm" (ngSubmit)="loginProfile(loginForm.value)">
+                    <div class="input-group mt-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">
+                                <i class="fa-solid fa-user"></i>
+                            </span>
+                        </div>
+                        <input type="email" formControlName="email" name="email" placeholder="Enter email" class="form-control">
+                        <em *ngIf="!validateEmail() && email.errors?.['required']">This field is required.</em>
+                        <em *ngIf="!validateEmail() && email.errors?.['email']">Please provide a valid email.</em>
+                    </div>
+                    <div class="input-group mt-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">
+                                <i class="fa-solid fa-lock"></i>
+                            </span>
+                        </div>
+                        <input type="password" formControlName="password" name="username" placeholder="Enter password" class="form-control">
+                        <em *ngIf="!validatePassword() && password.errors?.['required']">This field is required.</em>
+                        <em *ngIf="password.dirty && password.errors?.['pattern']">Password must be at least 8 characters long contain a number, an uppercase letter and a special character.</em> 
+                    </div>
+                    <small>
+                        <a href="">Forgot password?</a>
+                    </small>
+                    <div class="btn-signin">
+                        <button type="submit" [disabled]="loginForm.invalid" class="btn btn-success">Sign In</button>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-sm-auto" >
+                            Don't have an account?
+                        </div>
+                        <div class="col-sm-auto">
+                            <a href="" [routerLink] = "['/user/signup']">
+                                <button type="button" class="btn btn-outline-info">Register</button>
+                            </a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

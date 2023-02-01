@@ -1,0 +1,34 @@
+<div class="container-fluid">
+    <div class="main">
+        <div class="card col-md-4">
+            <div class="card-header">
+                <h5>Add Comment to your shift</h5>
+            </div>
+            <div class="card-body">
+                <form [formGroup]="commentForm" (ngSubmit)="createComment(commentForm.value)">
+                    <div class="input-group mt-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">
+                                <i class="fa-solid fa-calendar-days"></i>
+                            </span>
+                        </div>
+                        <input type="date" formControlName="created" name="date"class="form-control">
+                        <em *ngIf="!validateDate() && created.errors?.['required']">This field is required.</em>
+                    </div>
+                    <div class="input-group mt-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">
+                                <i class="fa-solid fa-comment"></i>
+                            </span>
+                            <textarea name="description" rows="10" cols="50" formControlName="description" class="form-control" placeholder="Description"></textarea>
+                        </div>
+                    </div>
+                    <div class="btn-save-cancel">
+                        <button type="submit" [disabled]="commentForm.invalid" class="btn btn-success">Save</button>
+                        <button type="button" class="btn btn-default" (click)="cancel()">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

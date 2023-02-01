@@ -1,0 +1,44 @@
+<header id="header" class="header">
+    <div class="container-flex">
+        <div class="logo">
+            <a href="">
+                <img style="width: 240px;" src="https://shifton.com/static/images/logo_full.svg" alt="">
+            </a>
+        </div>
+        <nav class="main_navbar">
+            <ul>
+                <li class="nav-item">
+                  <a *ngIf="!authService.isAuthenticated()" [routerLink] = "['/user/signup']">Sign Up</a>
+                </li>
+                <li class="nav-item">
+                    <a *ngIf="!authService.isAuthenticated()" [routerLink]="['/user/login']">Login</a>
+                    <div class="dropdown">
+                        <a *ngIf="authService.isAuthenticated()" class="dropbtn"> Welcome, {{authService.currentUser.firstname}}</a>
+                        <div class="dropdown-content">
+                            <a [routerLink]="['/user/profile']">Edit profile</a>
+                            <a [routerLink]="['/user/updatePassword']">Edit password</a>
+                            <li class="divider"></li>
+                            <a *ngIf="authService.isAdmin()" [routerLink]="['/user/allUsers']">Users</a>
+                            <a *ngIf="authService.isAdmin()" [routerLink]="['/user/allShifts']">Shifts</a>
+                            <li class="divider"></li>
+                            <a [routerLink]="['shift/new']">Add shift</a>
+                            <a [routerLink]="['/shift']">My shifts</a>
+                            <a [routerLink]="['/shift/search']">Search</a>
+                            <!-- <a href="#">Work reports</a> -->
+                            <li class="divider"></li>
+                            <a (click)="logout()">Logout</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+
+
+
+
+
+

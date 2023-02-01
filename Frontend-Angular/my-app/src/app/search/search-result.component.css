@@ -1,0 +1,20 @@
+.search{
+    display: flex;
+    justify-content: center;
+    background: black;
+}
+
+.container{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 15px;
+    line-height: 1.42;
+    color: #ebebeb;
+
+    margin-left: 13%;
+    margin-top: 3%;
+}
+
+.row{
+    display: flex;
+    justify-content: center;
+}
