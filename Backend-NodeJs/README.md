@@ -1,0 +1,1 @@
+# This project is made with NodeJs - run node app.js in terminal to start the server
